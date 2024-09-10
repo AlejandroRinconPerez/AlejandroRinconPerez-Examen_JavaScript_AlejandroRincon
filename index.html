@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mischismes.com</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <header>
+        <h1>mischismes.com</h1>
+        <p>Tu lugar para registrar y compartir chismes.</p>
+    </header>
+
+    <main>
+        <section class="chisme-form">
+            <h2>Agregar Nuevo Chisme</h2>
+            <form id="chismeForm">
+                <label for="Identificador">Identificador unico de chisme:</label>
+                <textarea id="Identificador" required></textarea>
+                <label for="descripcion">Descripción del Chisme:</label>
+                <textarea id="descripcion" required></textarea>
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Laboral">Laboral</option>
+                    <option value="Familiar">Familiar</opt  ion>
+                </select>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+
+                <label for="estado">Estado:</label>
+                <select id="estado" required>
+                    <option value="Guardado">Guardado</option>
+                    <option value="Contado">Contado</option>
+                </select>
+
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios"></textarea>
+
+                <button id="botonguardar" type="submit">Guardar Chisme</button>
+            </form>
+        </section>
+
+        <section class="chismes-list">
+            <h2>Lista de Chismes</h2>
+            <div id="filtros">
+                <label for="filtroCategoria">Filtrar por Categoría:</label>
+                <select id="filtroCategoria">
+                    <option value="">Todas</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Laboral">Laboral</option>
+                    <option value="Familiar">Familiar</option>
+                </select>
+
+                <label for="filtroEstado">Filtrar por Estado:</label>
+                <select id="filtroEstado">
+                    <option value="">Todos</option>
+                    <option value="Guardado">Guardado</option>
+                    <option value="Contado">Contado</option>
+                </select>
+
+                <input type="text" id="busqueda" placeholder="Buscar chisme...">
+            </div>
+            <div class="Padre">
+                
+            </div>
+
+            <button class="contado"> Filtro por contado </button>
+            <button class="guardado"> Filtro guardado</button>
+            <button class="personal"> Filtro Perosnal </button>
+            <button class="laboral"> Filtro Laboral </button>
+            <button class="Familiar"> Filtro Familiar </button>
+
+            <div class="padre2">
+
+
+            </div>         
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 mischismes.com</p>
+    </footer>
+
+
+
+    <template id="Mostrar">
+        <div class="chismes">
+            <p>Identificador</p>
+            <span class="Identificador">111</span>
+
+            <p>Descripcion</p>
+            <span class="Descripcion">L libero? Deserunt saepe voluptate molestias praesentium quod dolorum tempore quas aliquid quam.</span>
+
+            <p>Categoria</p>
+            <span class="Categoria">Lorem ipsm nulla magni sunt! Tempore debitis officiis quo explicabo inventore quibusdam atque!</span>
+
+            <p>fecha</p>
+            <span class="fecha">Lorem ipsum doloofficia, laborum dolorem ut vel eligendi at pariatur nobis?</span>
+
+            <p>Estado</p>
+            <span class="Estado">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum ipsamecessitatibus harum?</span>
+
+            <p>Comentarios</p>
+            <span class="Comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iustias tempore eligendi?</span>
+
+            <button class="Borrar">Borrar
+            <button class="Editar"> Editar</button> 
+            <button class="Estado">Cambio de Estado</button>
+        </div>
+
+
+    </template>
+    <template id="editor">
+        <section class="chisme-form">
+            <h2>Editar chisme</h2>
+            <form id="chismeForm">
+                <h1 class="id_Edicion"></h1>
+                
+                <label for="descripcion_e">Descripción del Chisme:</label>
+                <textarea id="descripcion_e" required></textarea>
+
+                <label for="categoria_e">Categoría:</label>
+                <select id="categoria_e" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Laboral">Laboral</option>
+                    <option value="Familiar">Familiar</opt  ion>
+                </select>
+
+                <label for="fecha_e">Fecha:</label>
+                <input type="date" id="fecha_e" required>
+
+                <label for="estado_e">Estado:</label>
+                <select id="estado_e" required>
+                    <option value="Guardado">Guardado</option>
+                    <option value="Contado">Contado</option>
+                </select>
+
+                <label for="comentarios_e">Comentarios Adicionales:</label>
+                <textarea id="comentarios_e"></textarea>
+
+                <button id="botoneditar" type="submit">Editar</button>
+            </form>
+        </section>
+
+
+
+
+    </template>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
