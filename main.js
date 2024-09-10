@@ -272,7 +272,7 @@ let botonpersonal = document.querySelector(".personal");
 botonpersonal.addEventListener("click", mostrarchispersonal);
 let botonlaboral = document.querySelector(".laboral");
 botonlaboral.addEventListener("click", mostrarchisLaboral);
-let botonFamiliar = document.querySelector(".familiar"); // Cambiado de ".personal" a ".familiar"
+let botonFamiliar = document.querySelector(".Familiar");
 botonFamiliar.addEventListener("click", mostrarFamiliar);
 
 function mostrarGuardado() {
